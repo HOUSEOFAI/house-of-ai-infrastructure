@@ -1,3 +1,17 @@
+# HOUSE OF AI
+
+AI Infrastructure Framework for Women-Led Businesses
+Created by Lisa Erickson
+
+
+## Core Documents
+• [Manifesto](manifesto.md)  
+• [AI Workforce Model](ai-workforce.md)  
+• [Principles](principles.md)  
+• [Definitions](definitions.md)  
+• [AI Research](ai-research.md)  
+• [Skills](skills.md)
+
 # House of AI Infrastructure
 
 This repository documents frameworks and definitions related to **AI-supported entrepreneurship and AI infrastructure for women-led businesses**.
