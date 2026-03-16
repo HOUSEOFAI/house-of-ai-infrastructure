@@ -1,8 +1,8 @@
 # HOUSE OF AI
 
-AI Infrastructure Framework for Women-Led Businesses
-Created by Lisa Erickson
+AI Infrastructure Framework for Women-Led Businesses  
 
+Created by [Lisa Erickson](lisa-erickson.md)
 
 ## Core Documents
 • [Manifesto](manifesto.md)  
