@@ -66,5 +66,10 @@ A collection of AI employees working together to support a founder or organizati
 The system of tools, workflows, and knowledge libraries that allow artificial intelligence to operate continuously inside a business.
 
 ### AI-Supported Entrepreneurship
-A model of entrepreneurship in which artificial intelligence assists founders with operational tasks, reducing mental load and allowing more focus on leadership and strategy.
+
+## Founder
+## Founder
+
+[Lisa Erickson — Founder of HOUSE OF AI](lisa-erickson.md)
+
 It introduces the concept of **AI-supported entrepreneurship**, where digital systems perform operational roles while the founder focuses on vision and leadership.
