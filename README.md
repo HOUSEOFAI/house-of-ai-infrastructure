@@ -6,6 +6,8 @@ Created by [Lisa Erickson](lisa-erickson.md)
 Founder of HOUSE OF AI™
 https://houseofai.boston
 
+The House of AI Infrastructure framework was created by Lisa Erickson to help entrepreneurs — especially women-led businesses — design AI-powered operational systems.
+
 ## Core Documents
 • [Manifesto](manifesto.md)  
 • [AI Workforce Model](ai-workforce.md)  
