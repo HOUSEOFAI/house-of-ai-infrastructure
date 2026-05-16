@@ -64,6 +64,27 @@ CREATORS = {
             "strategic content flow into the content engine"
         ),
     },
+    "ray-cfu": {
+        "name": "Ray CFU",
+        "channel_handle": "@raycfu",
+        "channel_id": None,
+        "search_query": "Ray CFU YouTube",
+        "role": "Viral Content Strategy & Growth",
+        "extract_focus": [
+            "viral content frameworks and what makes content spread",
+            "YouTube growth and audience-building strategies",
+            "content formats and styles that get high engagement",
+            "hooks and thumbnails that drive clicks",
+            "storytelling techniques for viral reach",
+            "platform algorithm strategies",
+            "monetization and offer integration within content",
+            "community building and loyal audience frameworks",
+        ],
+        "marketing_application": (
+            "Program viral content patterns, high-engagement formats, and "
+            "growth-driving hooks into the daily content engine"
+        ),
+    },
     "melanie-ann-layer": {
         "name": "Melanie Ann Layer",
         "channel_handle": "@MelanieAnnLayer",
