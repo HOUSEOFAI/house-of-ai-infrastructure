@@ -1,0 +1,5 @@
+.env
+output/
+.cache/
+*.png
+*.mp4

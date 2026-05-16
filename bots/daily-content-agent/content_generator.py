@@ -68,8 +68,19 @@ def generate_daily_content_package(
     todays_topics = viral_intelligence.get("todays_topics", [])
     viral_angles = viral_intelligence.get("viral_angles", [])
     hook_patterns = viral_intelligence.get("hook_patterns", [])
+    visual_assets = business_context.get("visual_assets_available", [])
 
-    prompt = f"""You are the AI Marketing Employee for {biz_name} (@house_of_ai.boston).
+    asset_section = ""
+    if visual_assets:
+        asset_list = "\n".join(f"- {a}" for a in visual_assets[:20])
+        asset_section = f"""
+## PRE-GENERATED VISUAL ASSETS (use these filenames in b_roll_notes)
+These cinematic images are already in the library — reference them by filename:
+{asset_list}
+When writing b_roll_notes, match the closest asset filename to the scene described.
+"""
+
+    prompt = f"""You are the AI Marketing Employee for {biz_name} (@house_of_ai.boston).{asset_section}
 
 ## YOUR EXPERT PROGRAMMING
 {brief_snippet}

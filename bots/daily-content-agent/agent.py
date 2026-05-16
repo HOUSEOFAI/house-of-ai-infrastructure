@@ -43,6 +43,20 @@ log = logging.getLogger(__name__)
 OUTPUT_DIR = Path(__file__).parent / "output"
 
 BRAND_DIR = Path(__file__).parent.parent / "brand-intelligence"
+CREATIVE_STUDIO_DIR = Path(__file__).parent.parent / "creative-studio" / "output"
+
+
+def _load_visual_asset_library() -> list[str]:
+    """Return list of available generated asset filenames from the creative studio."""
+    if not CREATIVE_STUDIO_DIR.exists():
+        return []
+    assets = []
+    for day_dir in sorted(CREATIVE_STUDIO_DIR.iterdir(), reverse=True):
+        if day_dir.is_dir():
+            assets.extend(f.name for f in day_dir.glob("*.png"))
+            if assets:
+                break  # only use most recent day's assets
+    return assets
 
 
 def _load_brand_intelligence() -> dict:
@@ -57,6 +71,7 @@ def _load_brand_intelligence() -> dict:
 
 
 BUSINESS_CONTEXT = _load_brand_intelligence()
+VISUAL_ASSETS = _load_visual_asset_library()
 
 
 def save(data, path: Path, as_json: bool = False) -> None:
@@ -131,8 +146,12 @@ def run(args: argparse.Namespace) -> None:
 
     # ── Step 3: Generate full content package ───────────────────────────────
     log.info("Generating today's full content package with all 6 expert frameworks...")
-    # Inject agent memory into business context so agent knows what NOT to repeat
-    context_with_memory = {**BUSINESS_CONTEXT, "agent_memory": agent_context}
+    # Inject agent memory + visual asset library into business context
+    context_with_memory = {
+        **BUSINESS_CONTEXT,
+        "agent_memory": agent_context,
+        "visual_assets_available": VISUAL_ASSETS,
+    }
     content_package = generate_daily_content_package(client, viral_intelligence, context_with_memory)
 
     save(content_package, output_dir / "content_package.json", as_json=True)
