@@ -12,6 +12,7 @@ the document that programs your AI marketing & content agent.
 | **Leanne Mosley (Rich Queen)** | Premium messaging, identity-based language, authority positioning |
 | **Brooke Shelton** | Content structure, story arcs, hook formulas, content strategy |
 | **Russell Brunson** | Funnel hacking, value ladder, offer stacking, hook-story-offer, webinar/VSL scripts |
+| **Melanie Ann Layer** | Feminine power, quantum identity, desire activation, embodiment-first language |
 
 ## What It Produces
 

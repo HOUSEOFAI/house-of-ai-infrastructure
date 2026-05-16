@@ -222,19 +222,21 @@ It must synthesize:
 - Premium messaging and identity language from **Leanne Mosley (Rich Queen)**
 - Content structure and strategy from **Brooke Shelton**
 - Funnel hacking, offer architecture, and hook-story-offer from **Russell Brunson**
+- Feminine power, quantum identity, and desire-based transformation from **Melanie Ann Layer**
 
 Structure the document with these sections:
-1. **Core Philosophy** — The unified marketing philosophy combining all four systems
+1. **Core Philosophy** — The unified marketing philosophy combining all five systems
 2. **Buyer Psychology Markers** — Chase Hughes frameworks to embed in every piece
 3. **Messaging Framework** — Leanne Mosley's language and premium positioning system
 4. **Content Architecture** — Brooke Shelton's structure and strategy system
 5. **Funnel Architecture** — Russell Brunson's value ladder, offer stack, and funnel sequences
-6. **Hook-Story-Offer System** — How to open, narrate, and close every piece of content
-7. **Master Marker List** — All high-priority markers numbered and categorized
-8. **Content Generation Instructions** — Step-by-step instructions for the AI agent
-9. **Language Patterns Library** — Ready-to-use language patterns by category
-10. **Funnel Stage Playbook** — What content to produce at each funnel stage (cold/warm/hot)
-11. **Programming Rules** — Non-negotiable rules for every piece of content
+6. **Feminine Power & Desire Activation** — Melanie Ann Layer's identity-elevation and quantum frameworks
+7. **Hook-Story-Offer System** — How to open, narrate, and close every piece of content
+8. **Master Marker List** — All high-priority markers numbered and categorized
+9. **Content Generation Instructions** — Step-by-step instructions for the AI agent
+10. **Language Patterns Library** — Ready-to-use language patterns by category
+11. **Funnel Stage Playbook** — What content to produce at each funnel stage (cold/warm/hot)
+12. **Programming Rules** — Non-negotiable rules for every piece of content
 
 Write this as a detailed, actionable brief. Be specific. Include actual language patterns,
 frameworks, funnel structures, and instructions. This is the brain of the marketing engine."""

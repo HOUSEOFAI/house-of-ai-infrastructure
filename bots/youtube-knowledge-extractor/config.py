@@ -64,6 +64,35 @@ CREATORS = {
             "strategic content flow into the content engine"
         ),
     },
+    "melanie-ann-layer": {
+        "name": "Melanie Ann Layer",
+        "channel_handle": "@MelanieAnnLayer",
+        "channel_id": None,
+        "search_query": "Melanie Ann Layer feminine power activation",
+        "role": "Feminine Power, Quantum Identity & Desire-Based Transformation",
+        "extract_focus": [
+            "feminine power as a creative and magnetic force",
+            "quantum identity and quantum leaping frameworks",
+            "desire as a compass — teaching that desire is divine direction",
+            "the Activation Method and identity-level transformation",
+            "being vs. doing — embodiment over hustle",
+            "high-level woman identity and self-concept elevation",
+            "manifestation through identity not action",
+            "premium positioning through energetic authority",
+            "the feminine as the source of creation and attraction",
+            "wealth and success as a natural state of being",
+            "releasing masculine hustle patterns for feminine flow",
+            "activating the next-level version of self in clients",
+            "desire-based marketing — selling through vision not pain",
+            "language that activates and elevates rather than convinces",
+        ],
+        "marketing_application": (
+            "Program desire-based, identity-elevation language into content — "
+            "speak to the woman your audience is becoming, activate their next-level "
+            "self-concept, and attract through embodied feminine authority rather than "
+            "pain-point or hustle-based marketing"
+        ),
+    },
     "russell-brunson": {
         "name": "Russell Brunson",
         "channel_handle": "@RussellBrunson",
@@ -107,4 +136,8 @@ MARKETING_MARKERS = {
     "offer_stacking": "Irresistible offer construction and bonus stacking frameworks",
     "story_selling": "Epiphany bridge, origin story, and hook-story-offer scripts",
     "traffic_sequences": "Cold/warm/hot audience nurture sequences and follow-up funnels",
+    "desire_activation": "Desire-based language that speaks to who the audience is becoming",
+    "quantum_identity": "Identity-elevation frameworks that activate the next-level self",
+    "feminine_power": "Feminine energy, embodiment, and magnetic attraction language",
+    "being_vs_doing": "Embodiment-first language patterns that replace hustle-based messaging",
 }
