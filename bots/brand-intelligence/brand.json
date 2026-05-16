@@ -1,0 +1,77 @@
+{
+  "business_name": "House of AI™",
+  "founder": "Lisa Erickson",
+  "instagram_handle": "@house_of_ai.boston",
+  "website": "https://houseofai.boston",
+  "current_followers": 532,
+  "follower_goal": 100000,
+  "goal_timeline": "12 months",
+
+  "positioning": "Luxury AI infrastructure for women founders",
+  "core_promise": "Remove dependency. Rebuild how your business runs.",
+  "tagline": "Fire yourself. Build your AI legacy.",
+
+  "brand_voice": [
+    "Refined, feminine, and luxurious — never tech-bro or generic",
+    "Authoritative but warm — speak like a high-level mentor, not a teacher",
+    "Sacred and bespoke — every word should feel intentional and elevated",
+    "Use 'rested wealth', 'fire yourself', 'Maison OS', 'boutique bots', 'AI legacy'",
+    "Never sound robotic, mass-market, or accessible to everyone — exclusivity is the brand"
+  ],
+
+  "dream_client": {
+    "demographics": "Women founders and CEOs, ages 30-55, $250k+ annual revenue",
+    "psychographics": "Value legacy, ethical technology, feminine leadership, operational independence, rested wealth",
+    "desires": "Scale without sacrificing personal life. Maintain unique brand voice. Be seen as an industry leader.",
+    "fears": "Burnout. Losing personal touch. Being left behind by AI. Depending on their own presence.",
+    "pain_points": [
+      "Operational overwhelm — cannot step away without the business suffering",
+      "Technical intimidation — know AI matters but don't have time to learn it",
+      "Generic solutions — mass-market automation that feels robotic and off-brand"
+    ]
+  },
+
+  "services": {
+    "The House": "Full AI infrastructure build — top tier, bespoke, application only",
+    "The Studio": "Mid-tier AI system build for established founders",
+    "The Commission": "Custom GPT or boutique bot commission",
+    "Maison OS": "Proprietary operating system for AI-powered businesses",
+    "Retreats": "High-level in-person AI immersion experiences"
+  },
+
+  "dm_keywords": {
+    "LEGACY": "Learn how to build your bespoke AI system",
+    "SYSTEM": "Get free guide on AI infrastructure",
+    "BOT": "Details on boutique bot commission",
+    "AI": "General entry point — learn more about House of AI"
+  },
+
+  "ctas": [
+    "DM me 'LEGACY' to learn how we build your bespoke AI system",
+    "DM me 'SYSTEM' to get my free guide on AI infrastructure",
+    "DM me 'BOT' for boutique bot details",
+    "Click the link in my bio to apply for The Studio",
+    "Save this post for when you're ready to scale",
+    "Share this with a female founder who needs to hear it"
+  ],
+
+  "proven_hooks": [
+    "The biggest lie female founders are told about scaling...",
+    "Why I stopped using ChatGPT for my high-ticket clients.",
+    "The secret to 'rested wealth' that no one is talking about.",
+    "If you're making over $250k, you need this AI system.",
+    "What if the goal of your business was to fire yourself?",
+    "Stop using generic AI tools that make your brand sound like a robot.",
+    "You don't need a new strategy. You need a system that breathes for you.",
+    "Why I stopped using ChatGPT for my clients..."
+  ],
+
+  "content_pillars": [
+    "Fire-Yourself AI — the concept of building a business that runs without you",
+    "Luxury AI Infrastructure — behind-the-scenes of bespoke AI systems",
+    "Rested Wealth — the lifestyle and identity of women who've automated",
+    "Founder Burnout — the emotional reality and AI as the solution",
+    "AI Tool Spotlights — practical breakdowns of tools for high-level founders",
+    "Client Wins & Case Studies — proof of concept without naming clients"
+  ]
+}

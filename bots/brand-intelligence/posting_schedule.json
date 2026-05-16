@@ -1,0 +1,72 @@
+{
+  "strategy": "5x per day to reach +20k followers in 30 days",
+  "daily_slots": [
+    {
+      "time": "08:00",
+      "slot_name": "The Morning Insight",
+      "format": "Static image or Carousel",
+      "content_type": "Polarizing opinion or high-level vision",
+      "goal": "Start the day with authority — make people think and share",
+      "example": "The biggest lie female founders are told about scaling..."
+    },
+    {
+      "time": "11:00",
+      "slot_name": "The Tool Spotlight",
+      "format": "Reel",
+      "content_type": "Rapid breakdown of a specific AI tool for founders",
+      "goal": "Education + reach — drives saves and new followers",
+      "example": "The AI tool that replaced my entire onboarding system"
+    },
+    {
+      "time": "14:00",
+      "slot_name": "The Infrastructure BTS",
+      "format": "Story or Reel",
+      "content_type": "Behind-the-scenes of an automated workflow or system",
+      "goal": "Aspiration — show the backend running while you live your life",
+      "example": "This automation handled 47 client inquiries while I was at lunch"
+    },
+    {
+      "time": "17:00",
+      "slot_name": "The Emotional Hook",
+      "format": "Reel",
+      "content_type": "Deep resonance post addressing Founder Burnout and relief",
+      "goal": "Connection and DMs — makes people feel seen and reach out",
+      "example": "You don't need a new strategy. You need a system that breathes for you."
+    },
+    {
+      "time": "21:00",
+      "slot_name": "The Evening Recap / CTA",
+      "format": "Static or Reel",
+      "content_type": "Direct lead-gen post with keyword CTA",
+      "goal": "Convert — drive DMs and consultation bookings",
+      "example": "If you're making over $250k and still doing this manually, DM me LEGACY."
+    }
+  ],
+
+  "growth_phases": {
+    "phase_1": {
+      "months": "1-3",
+      "goal": "Foundation — optimize profile, test content formats",
+      "frequency": "4-5 posts per week",
+      "focus": "Find what resonates"
+    },
+    "phase_2": {
+      "months": "4-6",
+      "goal": "Acceleration — rapid follower growth",
+      "frequency": "5-7 posts per week, heavy Reels",
+      "focus": "Double down on what worked in Phase 1"
+    },
+    "phase_3": {
+      "months": "7-9",
+      "goal": "Authority — solidify as industry leader",
+      "frequency": "Daily posting + monthly Lives",
+      "focus": "Depth, community, conversion"
+    },
+    "phase_4": {
+      "months": "10-12",
+      "goal": "Scale — hit 100k",
+      "frequency": "Daily + paid ads",
+      "focus": "Amplify top performers, optimize sales funnel"
+    }
+  }
+}
