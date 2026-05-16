@@ -40,117 +40,148 @@ def generate_daily_content_package(
     business_context: dict,
 ) -> dict:
     """
-    Generate a full day's content package:
-    - 3 social media posts (Instagram/LinkedIn/Facebook)
+    Generate a full day's content package using the 5x/day posting schedule:
+    - 08:00 Morning Insight (carousel/static)
+    - 11:00 Tool Spotlight (Reel)
+    - 14:00 Infrastructure BTS (Story/Reel)
+    - 17:00 Emotional Hook (Reel)
+    - 21:00 Evening CTA (static/Reel)
     - 1 email to list
-    - 1 YouTube/video script hook + outline
-    - 3 short-form video scripts (Reels/TikTok)
-    - 5 content hooks for tomorrow
-    - 1 sales/offer post
+    - 5 hooks for tomorrow
     """
     master_brief = load_master_brief()
     brief_snippet = master_brief[:6000] if master_brief else "No brief loaded yet — run the extraction bot first."
 
-    biz_name = business_context.get("business_name", "House of AI™")
-    offer = business_context.get("core_offer", "AI-powered business coaching for women")
-    audience = business_context.get("dream_client", "women entrepreneurs ready to scale with AI")
-    cta = business_context.get("call_to_action", "DM me 'AI' to learn more")
+    brand = business_context.get("brand", {})
+    competitors = business_context.get("competitors", {})
+    schedule = business_context.get("posting_schedule", {})
+
+    biz_name = brand.get("business_name", "House of AI™")
+    offer = str(brand.get("services", "AI-powered business infrastructure for women founders"))
+    audience = str(brand.get("dream_client", {}))
+    proven_hooks = brand.get("proven_hooks", [])
+    ctas = brand.get("ctas", ["DM me 'LEGACY' to learn more"])
+    voice_rules = brand.get("brand_voice", [])
+    white_space = competitors.get("our_white_space", [])
+    daily_slots = schedule.get("daily_slots", [])
 
     todays_topics = viral_intelligence.get("todays_topics", [])
     viral_angles = viral_intelligence.get("viral_angles", [])
     hook_patterns = viral_intelligence.get("hook_patterns", [])
 
-    prompt = f"""You are the AI Marketing Employee for {biz_name}.
+    prompt = f"""You are the AI Marketing Employee for {biz_name} (@house_of_ai.boston).
 
-## YOUR PROGRAMMING (Expert Frameworks)
+## YOUR EXPERT PROGRAMMING
 {brief_snippet}
 
-## TODAY'S VIRAL INTELLIGENCE
-Top trending angles: {viral_angles}
-Proven hook patterns: {hook_patterns}
-Today's hot topics: {json.dumps(todays_topics, indent=2)}
+## BRAND VOICE RULES (never break these)
+{chr(10).join(f"- {r}" for r in voice_rules)}
 
-## BUSINESS CONTEXT
-Business: {biz_name}
-Core Offer: {offer}
-Dream Client: {audience}
-Call to Action: {cta}
+## OUR WHITE SPACE (what makes us different from everyone else)
+{chr(10).join(f"- {w}" for w in white_space)}
+
+## PROVEN HOOKS (use or riff on these)
+{chr(10).join(f"- {h}" for h in proven_hooks)}
+
+## TODAY'S VIRAL INTELLIGENCE
+Trending angles: {viral_angles}
+Hot hook patterns: {hook_patterns}
+Today's topics: {json.dumps(todays_topics, indent=2)}
+
+## THE 5x/DAY POSTING SCHEDULE (generate one post per slot)
+{json.dumps(daily_slots, indent=2)}
 
 ## YOUR TASK
-Generate today's complete content package. Apply ALL frameworks:
-- Chase Hughes: embed buyer psychology triggers and behavioral language
-- Leanne Mosley: use premium identity-elevation messaging
-- Brooke Shelton: use proven content structure and hooks
-- Russell Brunson: apply hook-story-offer and funnel logic
-- Melanie Ann Layer: use desire-based, feminine power language
-- Ray CFU: use viral formats and engagement-driving patterns
+Generate the complete 5x/day content package for @house_of_ai.boston.
+Apply ALL six expert frameworks in every piece:
+- Chase Hughes: buyer psychology triggers and behavioral compliance language
+- Leanne Mosley: premium identity-elevation and queen energy messaging
+- Brooke Shelton: proven content structure and hook formulas
+- Russell Brunson: hook-story-offer and funnel logic
+- Melanie Ann Layer: desire-based feminine power language
+- Ray CFU: viral format patterns and engagement drivers
 
 Return a JSON object:
 {{
   "date_generated": "today",
-  "theme_of_the_day": "the unifying theme across all content today",
-  "social_posts": [
+  "theme_of_the_day": "the single unifying theme across all 5 posts today",
+  "instagram_posts": [
     {{
-      "platform": "Instagram",
-      "format": "carousel | single image | reel caption",
-      "hook": "the opening line",
+      "slot_time": "08:00",
+      "slot_name": "The Morning Insight",
+      "format": "carousel or static",
+      "hook": "the opening line — polarizing, high-level",
       "body": "full post body",
-      "cta": "call to action",
-      "hashtags": ["tag1", "tag2"],
-      "psychology_trigger_used": "which Chase Hughes trigger is embedded"
+      "slide_breakdown": ["Slide 1 text", "Slide 2 text", "Slide 3 text"],
+      "cta": "save / share CTA — no direct sell at 8am",
+      "hashtags": ["tag1", "tag2", "tag3"],
+      "psychology_trigger": "which framework element is embedded"
     }},
     {{
-      "platform": "LinkedIn",
-      "format": "text post",
-      "hook": "the opening line",
-      "body": "full post body",
-      "cta": "call to action",
-      "psychology_trigger_used": "which trigger is embedded"
+      "slot_time": "11:00",
+      "slot_name": "The Tool Spotlight",
+      "format": "Reel",
+      "hook": "opening line — curiosity-driven, cheat-code energy",
+      "script": "full 30-60 second Reel script",
+      "b_roll_notes": "what to film or show on screen",
+      "cta": "save + follow CTA",
+      "hashtags": ["tag1", "tag2", "tag3"],
+      "psychology_trigger": "which framework element is embedded"
     }},
     {{
-      "platform": "Facebook",
-      "format": "story post",
-      "hook": "the opening line",
-      "body": "full post body",
-      "cta": "call to action",
-      "psychology_trigger_used": "which trigger is embedded"
+      "slot_time": "14:00",
+      "slot_name": "The Infrastructure BTS",
+      "format": "Reel or Story",
+      "hook": "opening line — aspirational, behind the scenes",
+      "script": "full script showing the automated business running",
+      "b_roll_notes": "what to film — luxury location + phone showing automations running",
+      "cta": "DM keyword CTA",
+      "dm_keyword": "LEGACY or SYSTEM",
+      "hashtags": ["tag1", "tag2", "tag3"],
+      "psychology_trigger": "which framework element is embedded"
+    }},
+    {{
+      "slot_time": "17:00",
+      "slot_name": "The Emotional Hook",
+      "format": "Reel",
+      "hook": "opening line — deep emotional resonance, founder burnout",
+      "script": "full 30-60 second Reel script — make them feel deeply seen",
+      "b_roll_notes": "what to film",
+      "cta": "comment or DM CTA — connection-focused",
+      "hashtags": ["tag1", "tag2", "tag3"],
+      "psychology_trigger": "which framework element is embedded"
+    }},
+    {{
+      "slot_time": "21:00",
+      "slot_name": "The Evening CTA",
+      "format": "static or Reel",
+      "hook": "direct, bold, income-qualifier hook",
+      "body": "full post — short, punchy, lead-gen focused",
+      "offer": "specific service or entry point being offered",
+      "cta": "direct DM keyword CTA — LEGACY, SYSTEM, or BOT",
+      "dm_keyword": "the keyword",
+      "hashtags": ["tag1", "tag2", "tag3"],
+      "psychology_trigger": "which framework element is embedded"
     }}
   ],
   "email": {{
-    "subject_line": "email subject",
+    "subject_line": "email subject — luxury, curiosity, or identity-based",
     "preview_text": "preview snippet",
-    "body": "full email body with greeting, story, offer, and CTA",
+    "body": "full email — greeting, story using epiphany bridge, offer, CTA",
     "ps_line": "the P.S. line",
     "funnel_stage": "cold | warm | hot"
   }},
-  "video_content": {{
-    "youtube_hook": "first 30 seconds script",
-    "youtube_outline": ["point 1", "point 2", "point 3", "point 4", "CTA"],
-    "reels": [
-      {{"hook": "opening line", "script": "15-30 second full script", "format": "talking head | text overlay | b-roll"}},
-      {{"hook": "opening line", "script": "15-30 second full script", "format": "talking head | text overlay | b-roll"}},
-      {{"hook": "opening line", "script": "15-30 second full script", "format": "talking head | text overlay | b-roll"}}
-    ]
-  }},
-  "sales_post": {{
-    "platform": "Instagram or Facebook",
-    "hook": "attention-grabbing open",
-    "story": "epiphany bridge / origin story moment",
-    "offer_reveal": "the offer and what they get",
-    "stack": "the value stack breakdown",
-    "urgency": "urgency or scarcity element",
-    "cta": "specific call to action"
-  }},
   "tomorrow_hooks": [
-    "Hook idea 1 for tomorrow",
-    "Hook idea 2 for tomorrow",
-    "Hook idea 3 for tomorrow",
-    "Hook idea 4 for tomorrow",
-    "Hook idea 5 for tomorrow"
+    "Hook 1 for tomorrow",
+    "Hook 2 for tomorrow",
+    "Hook 3 for tomorrow",
+    "Hook 4 for tomorrow",
+    "Hook 5 for tomorrow"
   ]
 }}
 
-Only return valid JSON. Make every word count. Write like a 7-figure marketer."""
+Only return valid JSON. Every word must feel luxury, feminine, and authoritative.
+Never sound generic, tech-bro, or accessible to everyone."""
 
     message = client.messages.create(
         model=MODEL,

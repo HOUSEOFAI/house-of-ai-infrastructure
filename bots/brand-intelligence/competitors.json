@@ -1,0 +1,70 @@
+{
+  "competitors": [
+    {
+      "handle": "@brand.nat",
+      "followers": "900k+",
+      "superpower": "Rapid tool breakdowns, partnered with major AI labs, high-frequency How-to Reels",
+      "hook_style": "Cheat code hooks, fast-paced editing, immediate ROI demonstrations",
+      "differentiate_from": "We are NOT tool-focused or tech-forward. We are systems, infrastructure, and legacy."
+    },
+    {
+      "handle": "@askcatgpt",
+      "followers": "618k+",
+      "superpower": "Humanizing AI, non-pretentious education, digital wellness + AI productivity",
+      "hook_style": "Relatable, accessible, wellness-forward",
+      "differentiate_from": "We are NOT accessible or mass-market. We are luxury, exclusive, and high-ticket."
+    },
+    {
+      "handle": "@sabrina_ramonov",
+      "followers": "high",
+      "superpower": "Deep technical tutorials with high aesthetic appeal",
+      "hook_style": "Technical depth with beautiful presentation",
+      "differentiate_from": "We are NOT technical educators. We are strategic partners who build the system FOR you."
+    },
+    {
+      "handle": "@alliekmiller",
+      "followers": "very large",
+      "superpower": "High-level AI advisor, enterprise focus, AI/ML trends",
+      "hook_style": "Industry authority, trend reporting",
+      "differentiate_from": "We are NOT enterprise or corporate. We are feminine, boutique, and founder-focused."
+    },
+    {
+      "handle": "@womenbuildai",
+      "followers": "growing",
+      "superpower": "Practical business automation, community for women",
+      "hook_style": "Practical, community-driven, accessible",
+      "differentiate_from": "We are NOT community or DIY. We are done-for-you, bespoke, and luxury."
+    }
+  ],
+
+  "our_white_space": [
+    "The ONLY luxury-positioned AI infrastructure brand for women founders",
+    "Feminine, ethical, and bespoke — in a space full of tech-bro energy",
+    "Done-FOR-you vs. DIY tools content everyone else teaches",
+    "Identity-level transformation — not just tool adoption but business reinvention",
+    "Aesthetic and editorial visual style that matches a luxury service price point"
+  ],
+
+  "viral_patterns_to_use": [
+    {
+      "pattern": "The Cheat Code Hook",
+      "example": "Why I stopped using ChatGPT for my clients...",
+      "use_for": "Reels, carousels — drives curiosity and shares"
+    },
+    {
+      "pattern": "The Infrastructure Pivot",
+      "example": "Show backend of automated business while founder is at luxury location",
+      "use_for": "BTS Reels and Stories — aspirational, drives saves"
+    },
+    {
+      "pattern": "The Relief Angle",
+      "example": "You don't need a new strategy. You need a system that breathes for you.",
+      "use_for": "Emotional hook Reels — drives comments and DMs"
+    },
+    {
+      "pattern": "The Proof Post",
+      "example": "Anonymized client case study showing before/after of AI infrastructure",
+      "use_for": "Carousels and long-form — builds trust and drives consultation bookings"
+    }
+  ]
+}

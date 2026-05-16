@@ -42,18 +42,21 @@ log = logging.getLogger(__name__)
 
 OUTPUT_DIR = Path(__file__).parent / "output"
 
-# ─── CONFIGURE YOUR BUSINESS HERE ─────────────────────────────────────────────
-BUSINESS_CONTEXT = {
-    "business_name": "House of AI™",
-    "founder_name": "Lisa Erickson",
-    "core_offer": "AI-powered business infrastructure for women entrepreneurs",
-    "dream_client": "women entrepreneurs who want to scale their business with AI without burning out",
-    "brand_voice": "empowered, feminine, intelligent, direct, transformational",
-    "call_to_action": "DM me 'AI' to learn how to build your AI-powered business",
-    "platforms": ["Instagram", "LinkedIn", "Facebook", "Email", "YouTube"],
-    "niche": "AI business + feminine leadership + women entrepreneurship",
-}
-# ──────────────────────────────────────────────────────────────────────────────
+BRAND_DIR = Path(__file__).parent.parent / "brand-intelligence"
+
+
+def _load_brand_intelligence() -> dict:
+    """Load full brand context from the brand-intelligence files."""
+    ctx = {}
+    for fname in ["brand.json", "competitors.json", "posting_schedule.json"]:
+        p = BRAND_DIR / fname
+        if p.exists():
+            with open(p) as f:
+                ctx[fname.replace(".json", "")] = json.load(f)
+    return ctx
+
+
+BUSINESS_CONTEXT = _load_brand_intelligence()
 
 
 def save(data, path: Path, as_json: bool = False) -> None:
