@@ -2,9 +2,11 @@
 House of AI™ Daily Content Agent
 
 Runs every morning to:
-1. Scout what's viral in your niche today
-2. Generate a full day's marketing content using all 5 expert frameworks
-3. Save everything ready to post
+1. Read memory (Daily Notes + Knowledge Base) — knows what's been done
+2. Scout what's viral in your niche today
+3. Generate a full day's marketing content using all 6 expert frameworks
+4. Save everything ready to post
+5. Update Daily Notes so the agent remembers what it did
 
 Usage:
     python agent.py                         # Full daily run
@@ -27,6 +29,12 @@ import anthropic
 
 from viral_scout import get_trending_videos, analyze_viral_patterns
 from content_generator import generate_daily_content_package, format_content_as_markdown
+
+# Memory system (Ray CFU's Three-Layer Architecture)
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent / "memory"))
+import daily_notes
+import knowledge_base
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -69,7 +77,17 @@ def run(args: argparse.Namespace) -> None:
     today = date.today().isoformat()
     output_dir = Path(args.output_dir) if args.output_dir else OUTPUT_DIR / today
 
-    # ── Step 1: Scout viral trends ──────────────────────────────────────────
+    # ── Step 1: Read memory — what does the agent already know? ─────────────
+    log.info("Loading agent memory...")
+    daily_notes.add_note("Daily content agent started")
+    daily_notes.add_task("daily_run", f"Full content generation run for {today}")
+    agent_context = knowledge_base.get_agent_context()
+    if "not yet built" in agent_context:
+        log.warning("Knowledge base not built yet — run memory/rebuild_kb.py first for best results")
+    else:
+        log.info("Knowledge base loaded: %s", knowledge_base.load().get("rebuild_date", "unknown date"))
+
+    # ── Step 2: Scout viral trends ──────────────────────────────────────────
     viral_cache = output_dir / "viral_intelligence.json"
 
     if args.skip_scout and viral_cache.exists():
@@ -106,16 +124,23 @@ def run(args: argparse.Namespace) -> None:
         }
 
     log.info("Viral intelligence ready: %d topics identified", len(viral_intelligence.get("todays_topics", [])))
+    daily_notes.mark_viral_scout_done()
 
-    # ── Step 2: Generate full content package ───────────────────────────────
-    log.info("Generating today's full content package with all 5 expert frameworks...")
-    content_package = generate_daily_content_package(client, viral_intelligence, BUSINESS_CONTEXT)
+    # ── Step 3: Generate full content package ───────────────────────────────
+    log.info("Generating today's full content package with all 6 expert frameworks...")
+    # Inject agent memory into business context so agent knows what NOT to repeat
+    context_with_memory = {**BUSINESS_CONTEXT, "agent_memory": agent_context}
+    content_package = generate_daily_content_package(client, viral_intelligence, context_with_memory)
 
     save(content_package, output_dir / "content_package.json", as_json=True)
 
-    # ── Step 3: Format as readable markdown ─────────────────────────────────
+    # ── Step 4: Format as readable markdown ─────────────────────────────────
     markdown = format_content_as_markdown(content_package)
     save(markdown, output_dir / "content_package.md")
+
+    # ── Step 5: Update Daily Notes memory ───────────────────────────────────
+    daily_notes.mark_content_generated(str(output_dir / "content_package.md"))
+    daily_notes.update_task("daily_run", "complete")
 
     # ── Step 4: Print summary ────────────────────────────────────────────────
     print("\n" + "=" * 60)
