@@ -217,21 +217,27 @@ Write a comprehensive markdown document titled:
 "# House of AI™ Marketing Engine Master Brief"
 
 This document will be used to program an AI agent that generates all marketing content.
-It should synthesize the buyer psychology from Chase Hughes, messaging from Leanne Mosley,
-and content structure from Brooke Shelton into unified, actionable instructions.
+It must synthesize:
+- Buyer psychology and behavioral influence from **Chase Hughes**
+- Premium messaging and identity language from **Leanne Mosley (Rich Queen)**
+- Content structure and strategy from **Brooke Shelton**
+- Funnel hacking, offer architecture, and hook-story-offer from **Russell Brunson**
 
 Structure the document with these sections:
-1. **Core Philosophy** — The unified marketing philosophy
+1. **Core Philosophy** — The unified marketing philosophy combining all four systems
 2. **Buyer Psychology Markers** — Chase Hughes frameworks to embed in every piece
-3. **Messaging Framework** — Leanne Mosley's language and positioning system
+3. **Messaging Framework** — Leanne Mosley's language and premium positioning system
 4. **Content Architecture** — Brooke Shelton's structure and strategy system
-5. **Master Marker List** — All high-priority markers numbered and categorized
-6. **Content Generation Instructions** — Step-by-step instructions for the AI agent
-7. **Language Patterns Library** — Ready-to-use language patterns by category
-8. **Programming Rules** — Non-negotiable rules for every piece of content
+5. **Funnel Architecture** — Russell Brunson's value ladder, offer stack, and funnel sequences
+6. **Hook-Story-Offer System** — How to open, narrate, and close every piece of content
+7. **Master Marker List** — All high-priority markers numbered and categorized
+8. **Content Generation Instructions** — Step-by-step instructions for the AI agent
+9. **Language Patterns Library** — Ready-to-use language patterns by category
+10. **Funnel Stage Playbook** — What content to produce at each funnel stage (cold/warm/hot)
+11. **Programming Rules** — Non-negotiable rules for every piece of content
 
 Write this as a detailed, actionable brief. Be specific. Include actual language patterns,
-frameworks, and instructions. This is the brain of the marketing engine."""
+frameworks, funnel structures, and instructions. This is the brain of the marketing engine."""
 
     try:
         message = client.messages.create(

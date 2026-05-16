@@ -64,6 +64,33 @@ CREATORS = {
             "strategic content flow into the content engine"
         ),
     },
+    "russell-brunson": {
+        "name": "Russell Brunson",
+        "channel_handle": "@RussellBrunson",
+        "channel_id": "UCnXSgCcGPFBNMBBrBVSZJGQ",
+        "role": "Funnel Hacking & Offer Architecture",
+        "extract_focus": [
+            "funnel hacking methodology — reverse-engineering competitor funnels",
+            "value ladder and offer stacking frameworks",
+            "the hook, story, offer framework",
+            "epiphany bridge and origin story scripts",
+            "dream customer avatar and customer journey",
+            "two comma club funnel structures (lead magnet, tripwire, core offer, upsells)",
+            "webinar funnel scripts (Perfect Webinar framework)",
+            "sales letter and VSL (video sales letter) structure",
+            "clickfunnels funnel types: squeeze, sales, membership, summit, challenge",
+            "attractive character and soap opera sequences",
+            "DotCom Secrets, Expert Secrets, Traffic Secrets frameworks",
+            "offer creation and irresistible offer stacking",
+            "urgency, scarcity, and deadline frameworks",
+            "traffic temperature: cold, warm, hot audience sequences",
+        ],
+        "marketing_application": (
+            "Program full funnel architecture — value ladders, offer stacks, "
+            "VSL/webinar scripts, hook-story-offer sequences, and traffic-to-conversion "
+            "funnels into the automated marketing engine"
+        ),
+    },
 }
 
 # Marker categories that map to the marketing engine
@@ -76,4 +103,8 @@ MARKETING_MARKERS = {
     "authority_signals": "Trust and authority-building frameworks",
     "identity_shifts": "Language that shifts buyer identity and self-concept",
     "conversion_sequences": "Step-by-step sequences that move people to action",
+    "funnel_architecture": "Funnel hacking structures, value ladders, and offer stacks",
+    "offer_stacking": "Irresistible offer construction and bonus stacking frameworks",
+    "story_selling": "Epiphany bridge, origin story, and hook-story-offer scripts",
+    "traffic_sequences": "Cold/warm/hot audience nurture sequences and follow-up funnels",
 }

@@ -11,6 +11,7 @@ the document that programs your AI marketing & content agent.
 | **Chase Hughes** | Buyer psychology triggers, behavioral influence, compliance sequences |
 | **Leanne Mosley (Rich Queen)** | Premium messaging, identity-based language, authority positioning |
 | **Brooke Shelton** | Content structure, story arcs, hook formulas, content strategy |
+| **Russell Brunson** | Funnel hacking, value ladder, offer stacking, hook-story-offer, webinar/VSL scripts |
 
 ## What It Produces
 
@@ -90,6 +91,8 @@ Upload these to:
 The `output/*/knowledge_profile.json` files contain structured markers:
 - `psychology_markers` → embed in sales copy and email
 - `content_markers` → use for content structure and hooks
+- `funnel_architecture` → value ladder, offer stack, and funnel stage sequences
+- `story_selling` → epiphany bridge, hook-story-offer, and VSL/webinar scripts
 - `top_10_markers` → the highest-priority programming instructions
 - `programming_instructions` → direct instructions for your AI agent
 
